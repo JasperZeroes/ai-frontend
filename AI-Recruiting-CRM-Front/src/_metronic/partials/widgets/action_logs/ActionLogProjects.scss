@@ -1,0 +1,99 @@
+.action-log {
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .card-header {
+      background-color: #f3f6f9;
+      border-bottom: 1px solid #ebedf3;
+      border-radius: 10px 10px 0 0;
+
+      .card-title {
+        font-weight: 600;
+        color: #3f4254;
+        font-size: 1.25rem;
+      }
+    }
+
+    .card-body {
+      padding: 20px;
+      max-height: 600px; // Adjust this to control the height of the scrollable area
+      overflow-y: auto;
+
+      // Custom scrollbar styling
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #3699ff; // Customize the scrollbar color
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #f3f6f9;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .symbol {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-right: 15px;
+
+          &.text-warning {
+            background-color: #ffc107;
+          }
+
+          &.text-success {
+            background-color: #28a745;
+          }
+
+          &.text-danger {
+            background-color: #dc3545;
+          }
+
+          &.text-primary {
+            background-color: #007bff;
+          }
+        }
+
+        .bi {
+          font-size: 16px;
+          color: #fff;
+        }
+
+        .fw-semibold {
+          font-weight: 600;
+        }
+
+        .fw-bold {
+          font-weight: 700;
+        }
+
+        .text-muted {
+          color: #7e8299;
+        }
+
+        .text-dark {
+          color: #3f4254;
+        }
+      }
+    }
+  }
+}
